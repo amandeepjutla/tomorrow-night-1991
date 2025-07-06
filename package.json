@@ -1,8 +1,8 @@
 {
   "name": "tomorrow-night-1991",
   "displayName": "Tomorrow Night 1991",
-  "description": "Theme that combines the bright text colors from Base16 Tomorrow Night Eighties with the darker interface colors from Base16 Tomorrow Night.",
-  "version": "0.4.0",
+  "description": "Finally, a theme for the nineties.",
+  "version": "0.4.1",
   "publisher": "ajutla",
   "icon": "icon.png",
   "repository": {
