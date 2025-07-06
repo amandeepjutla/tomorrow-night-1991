@@ -1,0 +1,25 @@
+{
+  "name": "tomorrow-night-1991",
+  "displayName": "Tomorrow Night 1991",
+  "description": "Theme that combines the bright text colors from Base16 Tomorrow Night Eighties with the darker interface colors from Base16 Tomorrow Night.",
+  "version": "0.0.1",
+  "publisher": "ajutla",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amandeepjutla/tomorrow-night-1991"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Tomorrow Night 1991",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tomorrow-night-1991.json"
+      }
+    ]
+  }
+}
