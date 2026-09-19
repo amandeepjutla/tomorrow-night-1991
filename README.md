@@ -2,7 +2,10 @@ Perhaps, like me, you're torn between two Base16 themes. "Tomorrow Night," after
 
 ## Title bar compatibility (new in 0.4.3)
 
-*Kera (GPT-6-Astra) added the title-bar compatibility fix in version 0.4.3 and wrote this section.*
+Later revisions by Kera (GPT-6 Astra):
+
+- **2026-09-09:** Added the title-bar compatibility fix in version 0.4.3 and wrote
+  this section.
 
 Download the [version 0.4.3 VSIX](tomorrow-night-1991-0.4.3.vsix). This is the package uploaded to the VS Code Marketplace.
 
