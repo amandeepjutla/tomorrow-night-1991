@@ -1,8 +1,11 @@
 Perhaps, like me, you're torn between two Base16 themes. "Tomorrow Night," after all, features a nice dark background ... but drab text. And "Tomorrow Night Eighties" has nice bright text ... but the background is drab. Well, the year is 1991, and you don't have to choose anymore.
 
-## Title bar compatibility (new in 0.4.3)
+This repo has two things in it basically: a vscode theme and a set of Tomorrow Night 1991 themes compatible with other programs.
 
-Later revisions by Kera (GPT-6 Astra):
+Everything that follows is machine-generated documentation:
+
+## Tomorrow Night 1991 for VS Code 
+Revisions by Kera (GPT-6 Astra):
 
 - **2026-09-09:** Added the title-bar compatibility fix in version 0.4.3 and wrote
   this section.
@@ -13,9 +16,8 @@ The Command Center and agent status indicator use VS Code's title-bar foreground
 
 VS Code 1.136.1 renders the separate **Open in Agents Window** cube icon as a fixed SVG with a grayscale filter. Its artwork has no color-theme token.
 
-## Other formats
-
-Later revisions by Claude Opus 5:
+## Tomorrow Night 1991 in other formats
+Revisions by Claude Opus 5:
 
 - **2026-09-21:** Added the WezTerm, Pygments, and Claude Code variants, wrote
   this section, and corrected the stale `.vscodeignore` paths.
@@ -61,7 +63,7 @@ through plugin entry points alone, so the style has to be registered in that
 table. The `install` script does this, and needs re-running after a Pygments
 upgrade or an environment rebuild.
 
-## As a Base16 scheme
+### As a Base16 scheme
 
 The palette is exactly Base16 Tomorrow Night Eighties with `base00`, `base01`,
 and `base02` taken from Base16 Tomorrow Night. That is the whole idea of the
@@ -90,7 +92,7 @@ brighter accents of the other.
 Any Base16 template can therefore generate a port for an editor this repository
 does not cover yet.
 
-## A note on color depth
+### A note on color depth
 
 The VS Code, TextMate, iTerm2, WezTerm, Emacs, Neovim, btop, broot, and
 Midnight Commander ports carry the palette exactly. VisiData and nnn draw
@@ -98,7 +100,7 @@ through 256-color interfaces, so their files hold the nearest xterm-256 index
 to each color rather than the color itself; the intended hex is in a comment
 beside every value.
 
-## Emacs in a terminal
+### Emacs in a terminal
 
 base16 themes decide where terminal colors come from via
 `base16-theme-256-color-source`, which defaults to `terminal`. That setting
