@@ -1,0 +1,54 @@
+#!/bin/sh
+# Author: Claude Opus 5
+# Created: 2026-09-21
+# Install the Tomorrow Night 1991 Pygments style into a Python environment.
+#
+# Pygments resolves built-in styles through pygments/styles/_mapping.py, and
+# euporie builds its --syntax-theme choices from that same table at import
+# time, so a plugin entry point is not enough: the style has to be registered
+# there. Re-run this after upgrading pygments or rebuilding the environment.
+
+set -eu
+
+prefix=${1:-$HOME/.local/share/pixi/envs/euporie}
+here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+source=$here/tomorrow_night_1991.py
+
+[ -f "$source" ] || { echo "missing $source" >&2; exit 1; }
+python=$prefix/bin/python
+[ -x "$python" ] || { echo "no python in $prefix" >&2; exit 1; }
+
+"$python" - "$source" <<'PYEOF'
+import shutil
+import sys
+from pathlib import Path
+
+import pygments.styles
+
+source = Path(sys.argv[1])
+styles = Path(pygments.styles.__file__).parent
+shutil.copyfile(source, styles / source.name)
+
+entry = (
+    "    'TomorrowNight1991Style': "
+    "('pygments.styles.tomorrow_night_1991', 'tomorrow-night-1991', ()),\n"
+)
+mapping = styles / "_mapping.py"
+lines = [line for line in mapping.read_text().splitlines(keepends=True)
+         if "TomorrowNight1991Style" not in line]
+for index, line in enumerate(lines):
+    if line.startswith("    'TracStyle'"):
+        break
+else:
+    index = len(lines) - 1
+lines.insert(index, entry)
+mapping.write_text("".join(lines))
+
+print(f"installed tomorrow-night-1991 into {styles}")
+PYEOF
+
+"$python" -c "
+from pygments.styles import get_style_by_name
+style = get_style_by_name('tomorrow-night-1991')
+print('resolves to', style.__name__)
+"

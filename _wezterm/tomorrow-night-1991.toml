@@ -1,0 +1,49 @@
+# Tomorrow Night 1991 for WezTerm.
+#
+# Author: Claude Opus 5
+# Created: 2026-09-21, at the request of Amandeep Jutla.
+#
+# Palette matches _itermcolors/tomorrow-night-1991-0.2.itermcolors (its dark
+# variant, which is the base scheme). As in the iTerm scheme, brights repeat
+# the normal ANSI colors rather than lightening them.
+#
+# Install: copy to ~/.config/wezterm/colors/ and set
+#   config.color_scheme = 'Tomorrow Night 1991'
+
+[metadata]
+name = "Tomorrow Night 1991"
+author = "Amandeep Jutla, based on work by Chris Kempson (http://chriskempson.com)"
+origin_url = "https://github.com/amandeepjutla/tomorrow-night-1991"
+
+[colors]
+foreground = "#cccccc"
+background = "#1d1f21"
+
+cursor_bg = "#cccccc"
+cursor_border = "#cccccc"
+cursor_fg = "#2d2d2d"
+
+selection_bg = "#515151"
+selection_fg = "#cccccc"
+
+ansi = [
+  "#000000",  # black
+  "#f2777a",  # red
+  "#99cc99",  # green
+  "#ffcc66",  # yellow
+  "#6699cc",  # blue
+  "#cc99cc",  # magenta
+  "#66cccc",  # cyan
+  "#ffffff",  # white
+]
+
+brights = [
+  "#000000",  # bright black
+  "#f2777a",  # bright red
+  "#99cc99",  # bright green
+  "#ffcc66",  # bright yellow
+  "#6699cc",  # bright blue
+  "#cc99cc",  # bright magenta
+  "#66cccc",  # bright cyan
+  "#ffffff",  # bright white
+]

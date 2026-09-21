@@ -1,2 +1,5 @@
-itermcolors/
-tmTheme/
+_itermcolors/
+_tmTheme/
+_wezterm/
+_pygments/
+_claude-code/
