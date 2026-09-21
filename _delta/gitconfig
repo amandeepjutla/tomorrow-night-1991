@@ -1,0 +1,11 @@
+# Tomorrow Night 1991 for delta (https://dandavison.github.io/delta/).
+#
+# Author: Claude Opus 5
+# Created: 2026-09-21, at the request of Amandeep Jutla.
+#
+# delta reads bat's theme directory, so no separate theme file is needed:
+# install _tmTheme/tomorrow-night-1991.tmTheme into ~/.config/bat/themes/,
+# run `bat cache --build`, then add this to your git config.
+
+[delta]
+	syntax-theme = tomorrow-night-1991

@@ -1,0 +1,37 @@
+# Tomorrow Night 1991 for VisiData
+#
+# Author: Claude Opus 5
+# Created: 2026-09-21, at the request of Amandeep Jutla.
+# https://github.com/amandeepjutla/tomorrow-night-1991
+#
+# VisiData draws through curses in 256 colors, so these are the nearest
+# xterm-256 indices to the palette, not the palette itself. The hex in each
+# comment is the color actually intended.
+options.color_default         = '252 on 234'      # #cccccc on #1d1f21
+options.color_default_hdr     = '221 bold on 234' # #ffcc66
+options.color_current_hdr     = '234 bold on 221'
+options.color_current_row     = '252 on 237'      # on #373b41
+options.color_current_col     = '252 on 235'      # on #282a2e
+options.color_key_col         = '80'              # #66cccc
+options.color_selected_row    = '114'             # #99cc99
+options.color_error           = '210'             # #f2777a
+options.color_warning         = '209'             # #f99157
+options.color_match           = '209'
+options.color_column_sep      = '237'
+options.color_hidden_col      = '246'             # #999999
+options.color_note_row        = '80'
+options.color_note_type       = '176'             # #cc99cc
+options.color_edit_cell       = '221 on 235'
+options.color_status          = '252 on 235'
+options.color_top_status      = '252 on 237'
+options.color_active_status   = '234 on 221'
+options.color_inactive_status = '246 on 235'
+options.color_graph_axis      = '246'
+options.color_heading         = '221 bold'
+options.color_code            = '114'
+options.color_clickable       = '68 underline'    # #6699cc
+options.color_keystrokes      = '176'
+options.color_sidebar         = '252 on 235'
+options.color_sidebar_title   = '221 on 235'
+options.color_menu            = '252 on 235'
+options.color_menu_active     = '234 on 221'

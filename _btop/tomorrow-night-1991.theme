@@ -1,0 +1,101 @@
+# Tomorrow Night 1991
+#
+# Author: Claude Opus 5
+# Created: 2026-09-21, at the request of Amandeep Jutla.
+# https://github.com/amandeepjutla/tomorrow-night-1991
+#
+# Meter gradients use the three tones each hue already has in
+# _itermcolors/tomorrow-night-1991-0.2.itermcolors (its light, default, and
+# dark appearance variants), so every value here is published theme color.
+# The temperature and CPU ramps deliberately cross hues, green to red, because
+# they encode a scale rather than a quantity.
+
+# Main background, empty for terminal default
+theme[main_bg]="#1d1f21"
+
+# Main text color
+theme[main_fg]="#cccccc"
+
+# Title color for boxes
+theme[title]="#cccccc"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#ffcc66"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#373b41"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ffcc66"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#999999"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#cccccc"
+
+# Background color of the percentage meters
+theme[meter_bg]="#373b41"
+
+# Misc colors for processes box
+theme[proc_misc]="#66cccc"
+
+# CPU box outline color
+theme[cpu_box]="#6699cc"
+
+# Memory/disks box outline color
+theme[mem_box]="#99cc99"
+
+# Net down/up box outline color
+theme[net_box]="#cc99cc"
+
+# Processes box outline color
+theme[proc_box]="#f99157"
+
+# Box divider line and small boxes line color
+theme[div_line]="#373b41"
+
+# Temperature graph color (green to red)
+theme[temp_start]="#99cc99"
+theme[temp_mid]="#ffcc66"
+theme[temp_end]="#f2777a"
+
+# CPU graph colors (green to red)
+theme[cpu_start]="#99cc99"
+theme[cpu_mid]="#ffcc66"
+theme[cpu_end]="#f2777a"
+
+# Mem/Disk free meter (green)
+theme[free_start]="#cae1c5"
+theme[free_mid]="#b1d2ad"
+theme[free_end]="#99cc99"
+
+# Mem/Disk cached meter (blue)
+theme[cached_start]="#a6c2e0"
+theme[cached_mid]="#83a9d2"
+theme[cached_end]="#6699cc"
+
+# Mem/Disk available meter (cyan)
+theme[available_start]="#a9dee1"
+theme[available_mid]="#8dd2d4"
+theme[available_end]="#66cccc"
+
+# Mem/Disk used meter (red)
+theme[used_start]="#f2b2ae"
+theme[used_mid]="#e8928f"
+theme[used_end]="#f2777a"
+
+# Download graph colors (purple)
+theme[download_start]="#dfc7e0"
+theme[download_mid]="#d0aed3"
+theme[download_end]="#cc99cc"
+
+# Upload graph colors (yellow)
+theme[upload_start]="#fae1a4"
+theme[upload_mid]="#f9d686"
+theme[upload_end]="#ffcc66"
+
+# Process box color gradient for threads, mem and cpu usage (cool ramp)
+theme[process_start]="#99cc99"
+theme[process_mid]="#66cccc"
+theme[process_end]="#6699cc"

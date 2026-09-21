@@ -21,6 +21,8 @@ Later revisions by Claude Opus 5:
   this section, and corrected the stale `.vscodeignore` paths.
 - **2026-09-21:** Added the Emacs and Neovim variants and documented the
   Base16 slot mapping.
+- **2026-09-21:** Added the btop, broot, Midnight Commander, VisiData, nnn,
+  and delta variants.
 
 The VS Code theme in `themes/` is the canonical definition; the rest track it.
 
@@ -34,6 +36,12 @@ The VS Code theme in `themes/` is the canonical definition; the rest track it.
 | `_claude-code/` | Claude Code | Copy to `~/.claude/themes/` and select it as `custom:tomorrow-night-1991`. |
 | `_emacs/` | Emacs | Needs `base16-theme`. Put it on `custom-theme-load-path` and load `base16-tomorrow-night-1991`. |
 | `_neovim/` | Neovim | A palette table for a palette-driven colorscheme plugin, not a standalone colorscheme. |
+| `_btop/` | btop | Copy to `~/.config/btop/themes/` and set `color_theme`. Truecolor. |
+| `_broot/` | broot | Copy to `~/.config/broot/skins/` and point a `luma: dark` import at it. Truecolor. |
+| `_mc/` | Midnight Commander | Copy to `~/.local/share/mc/skins/` and set `skin=` in `ini`. Needs a truecolor terminal. |
+| `_visidata/` | VisiData | Install as `~/.visidatarc`. Nearest xterm-256 indices; VisiData draws through curses. |
+| `_nnn/` | nnn | Source it, or copy the two exports into your shell profile. xterm-256 indices. |
+| `_delta/` | delta | Config only — delta reads bat's theme directory, so the tmTheme serves it directly. |
 
 The terminal palettes share one ANSI set: black `#000000`, red `#f2777a`, green
 `#99cc99`, yellow `#ffcc66`, blue `#6699cc`, magenta `#cc99cc`, cyan `#66cccc`,
@@ -77,3 +85,11 @@ brighter accents of the other.
 
 Any Base16 template can therefore generate a port for an editor this repository
 does not cover yet.
+
+## A note on color depth
+
+The VS Code, TextMate, iTerm2, WezTerm, Emacs, Neovim, btop, broot, and
+Midnight Commander ports carry the palette exactly. VisiData and nnn draw
+through 256-color interfaces, so their files hold the nearest xterm-256 index
+to each color rather than the color itself; the intended hex is in a comment
+beside every value.
