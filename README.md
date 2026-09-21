@@ -23,6 +23,8 @@ Later revisions by Claude Opus 5:
   Base16 slot mapping.
 - **2026-09-21:** Added the btop, broot, Midnight Commander, VisiData, nnn,
   and delta variants.
+- **2026-09-21:** Fixed readability: the Emacs terminal color source, broot's
+  near-invisible selected line, and the low-contrast Midnight Commander menus.
 
 The VS Code theme in `themes/` is the canonical definition; the rest track it.
 
@@ -34,7 +36,7 @@ The VS Code theme in `themes/` is the canonical definition; the rest track it.
 | `_wezterm/` | WezTerm | Copy to `~/.config/wezterm/colors/` and set `config.color_scheme = 'Tomorrow Night 1991'`. |
 | `_pygments/` | Pygments | Run `_pygments/install <env-prefix>`; see the note below. |
 | `_claude-code/` | Claude Code | Copy to `~/.claude/themes/` and select it as `custom:tomorrow-night-1991`. |
-| `_emacs/` | Emacs | Needs `base16-theme`. Put it on `custom-theme-load-path` and load `base16-tomorrow-night-1991`. |
+| `_emacs/` | Emacs | Needs `base16-theme`. Put it on `custom-theme-load-path`. In a terminal, also see the note below. |
 | `_neovim/` | Neovim | A palette table for a palette-driven colorscheme plugin, not a standalone colorscheme. |
 | `_btop/` | btop | Copy to `~/.config/btop/themes/` and set `color_theme`. Truecolor. |
 | `_broot/` | broot | Copy to `~/.config/broot/skins/` and point a `luma: dark` import at it. Truecolor. |
@@ -93,3 +95,21 @@ Midnight Commander ports carry the palette exactly. VisiData and nnn draw
 through 256-color interfaces, so their files hold the nearest xterm-256 index
 to each color rather than the color itself; the intended hex is in a comment
 beside every value.
+
+## Emacs in a terminal
+
+base16 themes decide where terminal colors come from via
+`base16-theme-256-color-source`, which defaults to `terminal`. That setting
+emits ANSI color *names* rather than colors, on the assumption that the
+terminal's own palette is already the same scheme. If it is not, the results
+are not subtle: `mode-line` becomes a literal `brightyellow` bar and
+`mode-line-inactive` a `brightgreen` one.
+
+Unless you drive your terminal palette from base16-shell, set this before any
+theme loads:
+
+```elisp
+(setq base16-theme-256-color-source 'colors)
+```
+
+A graphical Emacs is unaffected; it uses the hex values directly.

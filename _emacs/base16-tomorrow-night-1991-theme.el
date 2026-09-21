@@ -8,6 +8,14 @@
 ;; and base02 taken from Base16 Tomorrow Night: the darker background and
 ;; greys of the one, the brighter accents of the other.
 
+;; In a terminal, set this BEFORE loading the theme:
+;;
+;;     (setq base16-theme-256-color-source 'colors)
+;;
+;; base16 otherwise emits ANSI color names on a terminal display, which assumes
+;; the terminal's own palette is already this scheme. If it is not, mode-line
+;; lands on a literal brightyellow and mode-line-inactive on brightgreen.
+
 ;;; Authors:
 ;; Scheme:   Amandeep Jutla, based on work by Chris Kempson (http://chriskempson.com)
 ;; Template: Kaleb Elwert <belak@coded.io>

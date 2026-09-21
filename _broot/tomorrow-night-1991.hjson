@@ -39,7 +39,7 @@ skin: {
     git_status_ignored: rgb(224,224,224) None
     git_status_conflicted: rgb(242,119,122) None
     git_status_other: rgb(242,119,122) None
-    selected_line: None rgb(40,42,46) / None rgb(40,42,46)
+    selected_line: None rgb(55,59,65) / None rgb(40,42,46)
     char_match: rgb(250,225,164) None
     file_error: rgb(242,178,174) None
     flag_label: rgb(180,183,180) None
