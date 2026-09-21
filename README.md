@@ -19,6 +19,8 @@ Later revisions by Claude Opus 5:
 
 - **2026-09-21:** Added the WezTerm, Pygments, and Claude Code variants, wrote
   this section, and corrected the stale `.vscodeignore` paths.
+- **2026-09-21:** Added the Emacs and Neovim variants and documented the
+  Base16 slot mapping.
 
 The VS Code theme in `themes/` is the canonical definition; the rest track it.
 
@@ -30,6 +32,8 @@ The VS Code theme in `themes/` is the canonical definition; the rest track it.
 | `_wezterm/` | WezTerm | Copy to `~/.config/wezterm/colors/` and set `config.color_scheme = 'Tomorrow Night 1991'`. |
 | `_pygments/` | Pygments | Run `_pygments/install <env-prefix>`; see the note below. |
 | `_claude-code/` | Claude Code | Copy to `~/.claude/themes/` and select it as `custom:tomorrow-night-1991`. |
+| `_emacs/` | Emacs | Needs `base16-theme`. Put it on `custom-theme-load-path` and load `base16-tomorrow-night-1991`. |
+| `_neovim/` | Neovim | A palette table for a palette-driven colorscheme plugin, not a standalone colorscheme. |
 
 The terminal palettes share one ANSI set: black `#000000`, red `#f2777a`, green
 `#99cc99`, yellow `#ffcc66`, blue `#6699cc`, magenta `#cc99cc`, cyan `#66cccc`,
@@ -44,3 +48,32 @@ Pygments resolves built-in styles through its own `_mapping.py` rather than
 through plugin entry points alone, so the style has to be registered in that
 table. The `install` script does this, and needs re-running after a Pygments
 upgrade or an environment rebuild.
+
+## As a Base16 scheme
+
+The palette is exactly Base16 Tomorrow Night Eighties with `base00`, `base01`,
+and `base02` taken from Base16 Tomorrow Night. That is the whole idea of the
+theme stated in sixteen slots: the darker background and greys of the one, the
+brighter accents of the other.
+
+| Slot | Color | From | Role |
+| --- | --- | --- | --- |
+| `base00` | `#1d1f21` | Tomorrow Night | Background |
+| `base01` | `#282a2e` | Tomorrow Night | Current line |
+| `base02` | `#373b41` | Tomorrow Night | Selection |
+| `base03` | `#999999` | Eighties | Comments |
+| `base04` | `#b4b7b4` | Eighties | Dark foreground |
+| `base05` | `#cccccc` | Eighties | Foreground |
+| `base06` | `#e0e0e0` | Eighties | Light foreground |
+| `base07` | `#ffffff` | Eighties | Lightest |
+| `base08` | `#f2777a` | Eighties | Red |
+| `base09` | `#f99157` | Eighties | Orange |
+| `base0A` | `#ffcc66` | Eighties | Yellow |
+| `base0B` | `#99cc99` | Eighties | Green |
+| `base0C` | `#66cccc` | Eighties | Cyan |
+| `base0D` | `#6699cc` | Eighties | Blue |
+| `base0E` | `#cc99cc` | Eighties | Purple |
+| `base0F` | `#a3685a` | Eighties | Brown |
+
+Any Base16 template can therefore generate a port for an editor this repository
+does not cover yet.
