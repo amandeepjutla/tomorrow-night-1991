@@ -50,6 +50,19 @@
 ;; Add all the faces to the theme
 (base16-theme-define 'base16-tomorrow-night-1991 base16-tomorrow-night-1991-theme-colors)
 
+;; base16-theme does not touch the terminal menu faces, so they keep Emacs's
+;; defaults: yellow on blue, with a red selection bar. Bring them into the
+;; palette. A graphical Emacs on macOS uses the native menu bar and ignores
+;; these.
+(let ((line "#282a2e") (sel "#373b41") (fg "#cccccc")
+      (dim "#999999") (accent "#ffcc66"))
+  (custom-theme-set-faces
+   'base16-tomorrow-night-1991
+   `(menu                   ((t (:foreground ,fg :background ,line))))
+   `(tty-menu-enabled-face  ((t (:foreground ,fg :background ,line))))
+   `(tty-menu-disabled-face ((t (:foreground ,dim :background ,line))))
+   `(tty-menu-selected-face ((t (:foreground ,accent :background ,sel :weight bold))))))
+
 ;; Mark the theme as provided
 (provide-theme 'base16-tomorrow-night-1991)
 

@@ -25,6 +25,8 @@ Later revisions by Claude Opus 5:
   and delta variants.
 - **2026-09-21:** Fixed readability: the Emacs terminal color source, broot's
   near-invisible selected line, and the low-contrast Midnight Commander menus.
+- **2026-09-21:** Gave the Emacs terminal menus palette colors instead of
+  Emacs's yellow-on-blue defaults.
 
 The VS Code theme in `themes/` is the canonical definition; the rest track it.
 
@@ -113,3 +115,8 @@ theme loads:
 ```
 
 A graphical Emacs is unaffected; it uses the hex values directly.
+
+The theme also sets `menu`, `tty-menu-enabled-face`, `tty-menu-disabled-face`,
+and `tty-menu-selected-face`, which base16 leaves alone. Emacs defaults those
+to yellow on blue with a red selection bar, which no theme survives. A
+graphical Emacs on macOS uses the native menu bar and ignores them.
