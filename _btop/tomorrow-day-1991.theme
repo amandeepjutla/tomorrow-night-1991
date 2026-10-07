@@ -1,0 +1,107 @@
+# Tomorrow Day 1991
+#
+# Author: Claude Opus 5.5 (claude-opus-5-5)
+# Created: 2026-10-06, at the request of Amandeep Jutla.
+# The light sibling of https://github.com/amandeepjutla/tomorrow-night-1991
+#
+# Page #ffffff. Every colour btop draws text in is at least 4.5:1 on it, and
+# that includes four gradients: btop prints the CPU percentages in "cpu", the
+# temperatures in "temp", the GPU watts in "cached" and the process columns in
+# "process", each at the step that matches the value.
+# Meter gradients run from the palette hue to darker tones of it, where the
+# Night theme runs from a pale tint up to the hue: a pale start disappears on
+# white. Start is the hue, mid is the hue blended 12% toward #000000, end is
+# 24% toward #000000, which gives the ramps the same lightness span as the
+# Night ones.
+# The temperature and CPU ramps deliberately cross hues, green to red, because
+# they encode a scale rather than a quantity.
+
+# Main background, empty for terminal default
+theme[main_bg]="#ffffff"
+
+# Main text color
+theme[main_fg]="#27292c"
+
+# Title color for boxes
+theme[title]="#27292c"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#8a6d00"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#a3cafe"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#27292c"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#74767a"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#27292c"
+
+# Background color of the percentage meters
+theme[meter_bg]="#d6d6d6"
+
+# Misc colors for processes box
+theme[proc_misc]="#1b7c83"
+
+# CPU box outline color
+theme[cpu_box]="#4271ae"
+
+# Memory/disks box outline color
+theme[mem_box]="#3c7c43"
+
+# Net down/up box outline color
+theme[net_box]="#8959a8"
+
+# Processes box outline color
+theme[proc_box]="#b95a14"
+
+# Box divider line and small boxes line color
+theme[div_line]="#939496"
+
+# Temperature graph color (green to red)
+theme[temp_start]="#3c7c43"
+theme[temp_mid]="#8a6d00"
+theme[temp_end]="#c82829"
+
+# CPU graph colors (green to red)
+theme[cpu_start]="#3c7c43"
+theme[cpu_mid]="#8a6d00"
+theme[cpu_end]="#c82829"
+
+# Mem/Disk free meter (green)
+theme[free_start]="#3c7c43"
+theme[free_mid]="#356d3b"
+theme[free_end]="#2e5e33"
+
+# Mem/Disk cached meter (blue)
+theme[cached_start]="#4271ae"
+theme[cached_mid]="#3a6399"
+theme[cached_end]="#325684"
+
+# Mem/Disk available meter (cyan)
+theme[available_start]="#1b7c83"
+theme[available_mid]="#186d73"
+theme[available_end]="#155e64"
+
+# Mem/Disk used meter (red)
+theme[used_start]="#c82829"
+theme[used_mid]="#b02324"
+theme[used_end]="#981e1f"
+
+# Download graph colors (purple)
+theme[download_start]="#8959a8"
+theme[download_mid]="#794e94"
+theme[download_end]="#684480"
+
+# Upload graph colors (yellow)
+theme[upload_start]="#8a6d00"
+theme[upload_mid]="#796000"
+theme[upload_end]="#695300"
+
+# Process box color gradient for threads, mem and cpu usage (cool ramp)
+theme[process_start]="#3c7c43"
+theme[process_mid]="#1b7c83"
+theme[process_end]="#4271ae"

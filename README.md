@@ -122,3 +122,42 @@ The theme also sets `menu`, `tty-menu-enabled-face`, `tty-menu-disabled-face`,
 and `tty-menu-selected-face`, which base16 leaves alone. Emacs defaults those
 to yellow on blue with a red selection bar, which no theme survives. A
 graphical Emacs on macOS uses the native menu bar and ignores them.
+
+## Tomorrow Day 1991
+Revisions by Claude Opus 5.5:
+
+- **2026-10-06:** Added the light sibling in six formats and wrote this
+  section.
+
+A light sibling, for a white page. It exists in six of the formats above and
+has no VS Code theme, so the table here is its definition. The hues are
+Tomorrow's light ones, darkened where needed: every text color reaches a
+contrast of at least 4.5:1 on `#ffffff`.
+
+| Role | Day | Night |
+| --- | --- | --- |
+| Background | `#ffffff` | `#1d1f21` |
+| Current line | `#eef0f3` | `#282a2e` |
+| Selection | `#a3cafe` | `#373b41` |
+| Comments | `#74767a` | `#999999` |
+| Foreground | `#27292c` | `#cccccc` |
+| Red | `#c82829` | `#f2777a` |
+| Orange | `#b95a14` | `#f99157` |
+| Yellow | `#8a6d00` | `#ffcc66` |
+| Green | `#3c7c43` | `#99cc99` |
+| Cyan | `#1b7c83` | `#66cccc` |
+| Blue | `#4271ae` | `#6699cc` |
+| Purple | `#8959a8` | `#cc99cc` |
+| Brown | `#a06658` | `#a3685a` |
+
+| File | Notes |
+| --- | --- |
+| `_tmTheme/tomorrow-day-1991.tmTheme` | The Night file's scope rules, in the same order. No value has an alpha channel: bat paints such a value opaque. |
+| `_btop/tomorrow-day-1991.theme` | Meter ramps run from the hue to darker tones of it, where Night's run from a pale tint up to the hue. btop prints some numbers in ramp colors, so every step is readable text. |
+| `_neovim/tomorrow-day-1991.lua` | The same thirteen keys. Set `background=light` as well. rusty draws line numbers in `selection` and has a dark `diff_background` default; both need overriding on a white page, as the file's header explains. |
+| `_nnn/colors-day.sh` | Nearest xterm-256 indices that reach 4.5:1 on white. |
+| `_delta/gitconfig-day` | `light = true` is required, because delta lists a theme it does not know as dark. Sets pale diff backgrounds to match. |
+| `_claude-code/tomorrow-day-1991.json` | Select it as `custom:tomorrow-day-1991`. |
+
+To have bat follow a light and a dark terminal, name both themes with
+`--theme-light` and `--theme-dark` in its config.

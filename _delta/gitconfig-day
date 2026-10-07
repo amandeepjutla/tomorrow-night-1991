@@ -1,0 +1,22 @@
+# Tomorrow Day 1991 for delta (https://dandavison.github.io/delta/).
+#
+# Author: Claude Opus 5.5 (claude-opus-5-5)
+# Created: 2026-10-06, at the request of Amandeep Jutla.
+#
+# delta reads bat's theme directory, so no separate theme file is needed:
+# install _tmTheme/tomorrow-day-1991.tmTheme into ~/.config/bat/themes/,
+# run `bat cache --build`, then add this to your git config.
+#
+# `light = true` is required: delta lists a theme it does not know as dark
+# and would otherwise pick its dark diff backgrounds. The four backgrounds
+# are the diff colors of the Claude Code variant. Removed lines and changed
+# words are drawn in the foreground color; added lines keep their syntax
+# colors, which stay between 4.1:1 and 5.0:1 on that green.
+
+[delta]
+	light = true
+	syntax-theme = tomorrow-day-1991
+	minus-style = normal "#ffedec"
+	minus-emph-style = normal "#fbd3d2"
+	plus-style = syntax "#e8f8e8"
+	plus-emph-style = normal "#c3ecc5"
