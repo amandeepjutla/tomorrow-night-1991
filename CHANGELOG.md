@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0
+
+- Include Tomorrow Day 1991 as a light theme in the same extension.
+- Base it on the existing Day palette, with stronger text colors for tinted
+  surfaces, blue-gray comments, green Markdown lists, and clear focus borders.
+- Use pale editor selections and search/diff highlights to keep syntax readable;
+  focused lists retain the existing Day selection blue with dark text.
+- Add a repeatable build from the existing Day palette and Night syntax rules.
+
 ## 0.4.4
 
 - Brighten CodeLens text and use dark text on pastel buttons, validation messages,

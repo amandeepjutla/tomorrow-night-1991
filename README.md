@@ -16,7 +16,7 @@ Later revisions by Kera (GPT-6.1 Sol):
   list selections, and included Amandeep's comment and Markdown list colors in
   version 0.4.4.
 
-Download the [version 0.4.4 VSIX](tomorrow-night-1991-0.4.4.vsix). Version 0.4.3
+Download the [version 0.5.0 VSIX](tomorrow-night-1991-0.5.0.vsix). Version 0.4.3
 was uploaded to the VS Code Marketplace.
 
 Comments use blue-gray `#7cafc2`, and Markdown lists use green `#99cc99`.
@@ -142,10 +142,33 @@ Revisions by Claude Opus 5.5:
 - **2026-10-06:** Added the light sibling in six formats and wrote this
   section.
 
-A light sibling, for a white page. It exists in six of the formats above and
-has no VS Code theme, so the table here is its definition. The hues are
+Later revisions by Kera (GPT-6.1 Sol):
+
+- **2026-10-10:** Added the VS Code edition, its readability adjustments, and
+  this edition's usage and build notes.
+
+A light sibling, for a white page. It exists in VS Code and six of the formats
+above. The table here defines the palette used by the original ports. The hues are
 Tomorrow's light ones, darkened where needed: every text color reaches a
 contrast of at least 4.5:1 on `#ffffff`.
+
+The VS Code edition keeps those hues and darkens them slightly further so
+colored text remains readable on tinted interface surfaces and the current line.
+Comments use a darker blue-gray, and Markdown lists use the Day green. Editor
+selections are a paler blue than the original ports; focused lists keep their
+stronger selection blue and use dark text. Focused notebook cells have blue
+borders. The Night theme and the original Day ports keep their existing colors.
+
+Choose **Tomorrow Day 1991** from **Preferences: Color Theme** after installing
+version 0.5.0. Local Night customizations should be scoped to
+`[Tomorrow Night 1991]` so their light text and dark notebook borders do not
+override Day's colors. See [VS Code's theme customization syntax](https://code.visualstudio.com/docs/configure/themes#customize-a-color-theme).
+
+To rebuild the VS Code Day edition, run `npm run build:day` on macOS. The
+dependency-free script reads the existing Day TextMate palette with macOS's
+`plutil` and combines it with the current Night scope rules; it resolves source
+paths relative to its own directory. To write a review copy elsewhere, pass
+the destination: `npm run build:day -- /path/to/tomorrow-day-1991.json`.
 
 | Role | Day | Night |
 | --- | --- | --- |

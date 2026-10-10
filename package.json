@@ -2,7 +2,7 @@
   "name": "tomorrow-night-1991",
   "displayName": "Tomorrow Night 1991",
   "description": "Finally, a theme for the nineties.",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "publisher": "ajutla",
   "icon": "icon.png",
   "repository": {
@@ -15,12 +15,20 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "build:day": "node scripts/build-day-theme.mjs"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Tomorrow Night 1991",
         "uiTheme": "vs-dark",
         "path": "./themes/tomorrow-night-1991.json"
+      },
+      {
+        "label": "Tomorrow Day 1991",
+        "uiTheme": "vs",
+        "path": "./themes/tomorrow-day-1991.json"
       }
     ]
   }
