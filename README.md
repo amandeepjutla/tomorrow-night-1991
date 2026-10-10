@@ -10,7 +10,20 @@ Revisions by Kera (GPT-6 Astra):
 - **2026-09-09:** Added the title-bar compatibility fix in version 0.4.3 and wrote
   this section.
 
-Download the [version 0.4.3 VSIX](tomorrow-night-1991-0.4.3.vsix). This is the package uploaded to the VS Code Marketplace.
+Later revisions by Kera (GPT-6.1 Sol):
+
+- **2026-10-10:** Improved control and CodeLens contrast, distinguished focused
+  list selections, and included Amandeep's comment and Markdown list colors in
+  version 0.4.4.
+
+Download the [version 0.4.4 VSIX](tomorrow-night-1991-0.4.4.vsix). Version 0.4.3
+was uploaded to the VS Code Marketplace.
+
+Comments use blue-gray `#7cafc2`, and Markdown lists use green `#99cc99`.
+These are built into the VS Code theme. Existing local overrides with those
+same values can stay in place or be removed without changing those colors.
+The Base16 palette and the other application ports retain their existing
+definitions.
 
 The Command Center and agent status indicator use VS Code's title-bar foreground and translucent background defaults. This keeps the project name, chat button, and session count readable when extensions such as Peacock color individual workspaces. Menu-bar selections also inherit the title-bar foreground and use a translucent hover background.
 
