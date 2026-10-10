@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.1
+
+- Replace stale release references with a stable Marketplace installation link.
+- Clarify the VS Code comment and selection colors, the port palette tables,
+  and how local customizations override theme defaults.
+- Keep both themes and all other application ports unchanged.
+
 ## 0.5.0
 
 - Include Tomorrow Day 1991 as a light theme in the same extension.

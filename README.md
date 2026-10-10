@@ -4,7 +4,8 @@ This repo has two things in it basically: a vscode theme and a set of Tomorrow N
 
 Everything that follows is machine-generated documentation:
 
-## Tomorrow Night 1991 for VS Code 
+## Tomorrow Night 1991 for VS Code
+
 Revisions by Kera (GPT-6 Astra):
 
 - **2026-09-09:** Added the title-bar compatibility fix in version 0.4.3 and wrote
@@ -15,21 +16,23 @@ Later revisions by Kera (GPT-6.1 Sol):
 - **2026-10-10:** Improved control and CodeLens contrast, distinguished focused
   list selections, and included Amandeep's comment and Markdown list colors in
   version 0.4.4.
+- **2026-10-10:** Clarified installation instructions and the differences between
+  the VS Code colors and the port palettes in version 0.5.1.
 
-Download the [version 0.5.0 VSIX](tomorrow-night-1991-0.5.0.vsix). Version 0.4.3
-was uploaded to the VS Code Marketplace.
+Install [Tomorrow Night 1991 from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ajutla.tomorrow-night-1991),
+then open **Preferences: Color Theme** and choose **Tomorrow Night 1991**.
 
-Comments use blue-gray `#7cafc2`, and Markdown lists use green `#99cc99`.
-These are built into the VS Code theme. Existing local overrides with those
-same values can stay in place or be removed without changing those colors.
-The Base16 palette and the other application ports retain their existing
-definitions.
+Comments are italic blue-gray (`#7cafc2`), and Markdown lists are green
+(`#99cc99`). These styles are built into the theme. Local token and workbench
+customizations take precedence; scope them to `[Tomorrow Night 1991]` when
+they are intended for this theme.
 
 The Command Center and agent status indicator use VS Code's title-bar foreground and translucent background defaults. This keeps the project name, chat button, and session count readable when extensions such as Peacock color individual workspaces. Menu-bar selections also inherit the title-bar foreground and use a translucent hover background.
 
 VS Code 1.136.1 renders the separate **Open in Agents Window** cube icon as a fixed SVG with a grayscale filter. Its artwork has no color-theme token.
 
 ## Tomorrow Night 1991 in other formats
+
 Revisions by Claude Opus 5:
 
 - **2026-09-21:** Added the WezTerm, Pygments, and Claude Code variants, wrote
@@ -43,7 +46,9 @@ Revisions by Claude Opus 5:
 - **2026-09-21:** Gave the Emacs terminal menus palette colors instead of
   Emacs's yellow-on-blue defaults.
 
-The VS Code theme in `themes/` is the canonical definition; the rest track it.
+These ports share the Base16 palette described below. VS Code adds editor
+interface colors and syntax styling, including the comment and Markdown list
+styles described above.
 
 | Directory | Format | Notes |
 | --- | --- | --- |
@@ -78,10 +83,13 @@ upgrade or an environment rebuild.
 
 ### As a Base16 scheme
 
-The palette is exactly Base16 Tomorrow Night Eighties with `base00`, `base01`,
+The core palette is Base16 Tomorrow Night Eighties with `base00`, `base01`,
 and `base02` taken from Base16 Tomorrow Night. That is the whole idea of the
 theme stated in sixteen slots: the darker background and greys of the one, the
 brighter accents of the other.
+
+The table describes the Base16 slots used by the ports. VS Code uses the
+blue-gray comment override described above in place of the `base03` gray.
 
 | Slot | Color | From | Role |
 | --- | --- | --- | --- |
@@ -108,10 +116,9 @@ does not cover yet.
 ### A note on color depth
 
 The VS Code, TextMate, iTerm2, WezTerm, Emacs, Neovim, btop, broot, and
-Midnight Commander ports carry the palette exactly. VisiData and nnn draw
-through 256-color interfaces, so their files hold the nearest xterm-256 index
-to each color rather than the color itself; the intended hex is in a comment
-beside every value.
+Midnight Commander formats support full RGB colors. VisiData and nnn draw
+through 256-color interfaces; their files use nearby xterm-256 colors, with
+the intended hex value in a comment beside each one.
 
 ### Emacs in a terminal
 
@@ -137,6 +144,7 @@ to yellow on blue with a red selection bar, which no theme survives. A
 graphical Emacs on macOS uses the native menu bar and ignores them.
 
 ## Tomorrow Day 1991
+
 Revisions by Claude Opus 5.5:
 
 - **2026-10-06:** Added the light sibling in six formats and wrote this
@@ -147,30 +155,34 @@ Later revisions by Kera (GPT-6.1 Sol):
 - **2026-10-10:** Added the VS Code edition, its readability adjustments, and
   this edition's usage and build notes.
 
-A light sibling, for a white page. It exists in VS Code and six of the formats
-above. The table here defines the palette used by the original ports. The hues are
-Tomorrow's light ones, darkened where needed: every text color reaches a
-contrast of at least 4.5:1 on `#ffffff`.
+A light sibling, for a white page. It is included in the VS Code extension
+and available in the six formats listed below.
 
-The VS Code edition keeps those hues and darkens them slightly further so
-colored text remains readable on tinted interface surfaces and the current line.
-Comments use a darker blue-gray, and Markdown lists use the Day green. Editor
-selections are a paler blue than the original ports; focused lists keep their
-stronger selection blue and use dark text. Focused notebook cells have blue
-borders. The Night theme and the original Day ports keep their existing colors.
+The VS Code edition uses darker text colors for readability on tinted
+interface surfaces and the current line. Its italic comments are blue-gray
+(`#476a7a`), and its Markdown lists are green (`#37723e`). Editor selections
+use pale blue (`#dceaff`); focused lists use a stronger blue (`#a3cafe`) with
+dark text. Focused notebook cells have blue borders.
 
-Choose **Tomorrow Day 1991** from **Preferences: Color Theme** after installing
-version 0.5.0. Local Night customizations should be scoped to
-`[Tomorrow Night 1991]` so their light text and dark notebook borders do not
-override Day's colors. See [VS Code's theme customization syntax](https://code.visualstudio.com/docs/configure/themes#customize-a-color-theme).
+Choose **Tomorrow Day 1991** from **Preferences: Color Theme**. It is available
+in extension version 0.5.0 and later. Local Night customizations should be
+scoped to `[Tomorrow Night 1991]` so their light text and dark notebook borders
+do not override Day's colors. See [VS Code's theme customization syntax](https://code.visualstudio.com/docs/configure/themes#customize-a-color-theme).
 
-To rebuild the VS Code Day edition, run `npm run build:day` on macOS. The
-dependency-free script reads the existing Day TextMate palette with macOS's
-`plutil` and combines it with the current Night scope rules; it resolves source
-paths relative to its own directory. To write a review copy elsewhere, pass
-the destination: `npm run build:day -- /path/to/tomorrow-day-1991.json`.
+To rebuild the VS Code Day edition from this repository, run
+`npm run build:day` on macOS with Node.js installed. The script reads the Day
+TextMate palette with `plutil` and combines it with the Night syntax rules.
+To write a review copy elsewhere, pass the destination:
+`npm run build:day -- /path/to/tomorrow-day-1991.json`.
 
-| Role | Day | Night |
+### Palette for other formats
+
+The following table gives the palettes used by the original ports.
+Day uses Tomorrow's light hues, darkened where needed so every text color
+reaches a contrast of at least 4.5:1 on `#ffffff`. The VS Code edition's
+comment and selection colors are given above.
+
+| Role | Day ports | Night ports |
 | --- | --- | --- |
 | Background | `#ffffff` | `#1d1f21` |
 | Current line | `#eef0f3` | `#282a2e` |
